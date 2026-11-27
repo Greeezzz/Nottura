@@ -1,4 +1,4 @@
-# Daftar Ikon Final (Tugas 1.13)
+﻿# Daftar Ikon Final (Tugas 1.13)
 
 Semua dari `lucide-react`, sesuai `src/data/features.ts`. Semuanya sudah ada di lucide dan dipakai dekoratif (`aria-hidden`).
 
@@ -11,6 +11,7 @@ Semua dari `lucide-react`, sesuai `src/data/features.ts`. Semuanya sudah ada di 
 | Google Antigravity | `Rocket` | Ya |
 | Google One Storage | `Cloud` | Ya |
 
-Audience (4 kartu) belum ada ikon final, usulan: `GraduationCap` (mahasiswa), `Code2` (developer), `PenLine` (penulis/kreator), `Wallet` (hemat budget). Cek ulang saat Fase 3.3.
+Audience (4 kartu) belum ada ikon final, usulan: `GraduationCap` (mahasiswa), `Code2` (developer), `Clapperboard` (content creator), `Wallet` (hemat budget). Cek ulang saat Fase 3.3.
 
 Tidak ada ikon custom yang dibutuhkan.
+
