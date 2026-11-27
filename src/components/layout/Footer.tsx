@@ -18,7 +18,11 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-bg pt-16 md:pt-24">
+    <footer className="relative isolate overflow-hidden border-t border-line bg-bg pt-16 md:pt-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_100%,rgb(9_10_51/0.55)_0%,transparent_75%)]"
+      />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div id="disclaimer">
           <GlassCard className="p-6 sm:p-8">

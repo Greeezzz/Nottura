@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { ChromeStar } from "@/components/ui/ChromeStar";
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -16,6 +17,7 @@ export function FinalCta() {
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <GlassCard className="relative overflow-hidden px-6 py-16 text-center sm:px-12 md:py-24">
+            <EditorialBackdrop variant="cta" />
             <ChromeStar
               size={72}
               className="pointer-events-none absolute -top-4 right-8 hidden opacity-60 animate-float sm:block"

@@ -1,12 +1,55 @@
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { features } from "@/data/features";
-import { cn } from "@/lib/cn";
+import type { Feature } from "@/types";
+
+const primaryFeatures = features.filter((f) => f.size === "lg");
+const secondaryFeatures = features.filter((f) => f.size === "sm");
+
+function FeatureCard({ f, index }: { f: Feature; index: number }) {
+  const Icon = f.icon;
+  return (
+    <Reveal delay={index * 0.08} className="h-full">
+      <GlassCard as="article" className="flex h-full flex-col justify-between p-7 md:p-8">
+        <div>
+          <div className="inline-flex size-11 items-center justify-center rounded-2xl border border-line bg-white/[0.06]">
+            <Icon size={20} aria-hidden="true" />
+          </div>
+          <h3 className="mt-6 text-[18px] font-semibold leading-[1.25] tracking-[-0.02em] md:text-[22px]">
+            {f.title}
+          </h3>
+          <p className="mt-2.5 text-[15px] leading-[1.65] text-muted md:text-[16px]">
+            {f.description}
+          </p>
+        </div>
+
+        <ul className="mt-6 space-y-2 border-t border-line pt-5 text-sm text-muted">
+          {f.points.map((point) => (
+            <li key={point} className="flex items-start gap-2.5">
+              <span
+                aria-hidden="true"
+                className="mt-1.5 size-1.5 shrink-0 rounded-full bg-white/60"
+              />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </GlassCard>
+    </Reveal>
+  );
+}
 
 export function Features() {
   return (
-    <section id="fitur" className="py-20 md:py-32">
+    <section id="fitur" className="relative isolate overflow-hidden py-20 md:py-32">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_45%_at_80%_20%,rgb(9_10_51/0.75)_0%,transparent_70%)]"
+      />
+
+      <EditorialBackdrop variant="section" index="01" label="TOOLS" />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -16,45 +59,18 @@ export function Features() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6">
-          {features.map((f, index) => {
-            const Icon = f.icon;
-            return (
-              <Reveal
-                key={f.id}
-                delay={index * 0.08}
-                className={cn(
-                  f.size === "lg" ? "md:col-span-2 lg:col-span-3" : "lg:col-span-2",
-                )}
-              >
-                <GlassCard as="article" className="flex h-full flex-col justify-between p-7 md:p-8">
-                  <div>
-                    <div className="inline-flex size-11 items-center justify-center rounded-2xl border border-line bg-white/[0.06]">
-                      <Icon size={20} aria-hidden="true" />
-                    </div>
-                    <h3 className="mt-6 text-[18px] font-semibold leading-[1.25] tracking-[-0.02em] md:text-[22px]">
-                      {f.title}
-                    </h3>
-                    <p className="mt-2.5 text-[15px] leading-[1.65] text-muted md:text-[16px]">
-                      {f.description}
-                    </p>
-                  </div>
+        {/* Baris atas: 2 kartu utama (simetris 2 kolom penuh) */}
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {primaryFeatures.map((f, index) => (
+            <FeatureCard key={f.id} f={f} index={index} />
+          ))}
+        </div>
 
-                  <ul className="mt-6 space-y-2 border-t border-line pt-5 text-sm text-muted">
-                    {f.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2.5">
-                        <span
-                          aria-hidden="true"
-                          className="mt-1.5 size-1.5 shrink-0 rounded-full bg-white/60"
-                        />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </GlassCard>
-              </Reveal>
-            );
-          })}
+        {/* Baris bawah: 4 kartu lainnya (1 kolom mobile, 2x2 tablet, 4 kolom penuh di desktop) */}
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {secondaryFeatures.map((f, index) => (
+            <FeatureCard key={f.id} f={f} index={index + primaryFeatures.length} />
+          ))}
         </div>
 
         <Reveal delay={0.2}>

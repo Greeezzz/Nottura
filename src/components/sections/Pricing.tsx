@@ -1,5 +1,6 @@
 import { Check, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,7 +12,13 @@ import { formatRupiah } from "@/lib/format";
 
 export function Pricing() {
   return (
-    <section id="paket" className="py-20 md:py-32">
+    <section id="paket" className="relative isolate overflow-hidden py-20 md:py-32">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_50%_at_50%_55%,rgb(9_10_51/0.85)_0%,transparent_72%)]"
+      />
+
+      <EditorialBackdrop variant="section" index="02" label="PLANS" />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -21,23 +28,18 @@ export function Pricing() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3 lg:items-center">
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
           {plans.map((plan, index) => {
             const isSolid = Boolean(plan.highlighted);
             // Mobile & Tablet: Shared tampil pertama; Desktop: urutan asli (Squad, Shared, Private)
-            const orderClass = isSolid
-              ? "order-first lg:order-none lg:-my-4"
-              : undefined;
+            const orderClass = isSolid ? "order-first lg:order-none" : undefined;
 
             return (
-              <Reveal key={plan.id} delay={index * 0.08} className={orderClass}>
+              <Reveal key={plan.id} delay={index * 0.08} className={cn("h-full", orderClass)}>
                 <GlassCard
                   as="article"
                   variant={isSolid ? "solid" : "glass"}
-                  className={cn(
-                    "flex h-full flex-col justify-between p-7 md:p-8",
-                    isSolid && "lg:py-10",
-                  )}
+                  className="flex h-full flex-col justify-between p-7 md:p-8"
                 >
                   <div>
                     <p
@@ -66,23 +68,25 @@ export function Pricing() {
                       </span>
                     </div>
 
-                    {plan.priceNote && (
-                      <p
-                        className={cn(
-                          "mt-2 text-xs",
-                          isSolid ? "text-bg/60" : "text-subtle",
-                        )}
-                      >
-                        {plan.priceNote}
-                      </p>
-                    )}
+                    <div className="mt-4 min-h-[60px] space-y-2.5">
+                      {plan.priceNote && (
+                        <p
+                          className={cn(
+                            "text-xs",
+                            isSolid ? "text-bg/60" : "text-subtle",
+                          )}
+                        >
+                          {plan.priceNote}
+                        </p>
+                      )}
 
-                    {plan.warning && (
-                      <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-bg">
-                        <AlertCircle size={14} aria-hidden="true" className="shrink-0" />
-                        <span>{plan.warning}</span>
-                      </div>
-                    )}
+                      {plan.warning && (
+                        <div className="inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-bg">
+                          <AlertCircle size={14} aria-hidden="true" className="shrink-0" />
+                          <span>{plan.warning}</span>
+                        </div>
+                      )}
+                    </div>
 
                     <ul
                       className={cn(
