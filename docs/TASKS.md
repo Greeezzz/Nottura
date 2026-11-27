@@ -1,4 +1,4 @@
-# TASKS.md — Pembagian Tugas Nottura (Chelo & Iwan)
+﻿# TASKS.md — Pembagian Tugas Nottura (Chelo & Iwan)
 
 Dua orang, satu target: landing page Nottura live. Peran sudah ditukar sesuai kesepakatan (Chelo pegang teknis dan bikin repo, Iwan pegang visual):
 
@@ -270,8 +270,8 @@ Centang di sini biar dua-duanya lihat posisi terkini.
 
 ### Iwan
 - [ ] Fase 0: 0.3
-- [ ] Fase 1: 1.8 – 1.13
-- [ ] Fase 2: 2.6 – 2.11
+- [x] Fase 1: 1.8 – 1.13 (1.11 versi SVG, Figma oleh Chelo)
+- [x] Fase 2: 2.6 – 2.11 (PR feat/phase-2-iwan, cek visual di /#/playground)
 - [ ] Fase 3: 3.1 – 3.5
 - [ ] Fase 4: 4.6 – 4.9
 - [ ] Fase 5: checklist visual + tes perangkat bagian Iwan
@@ -293,3 +293,4 @@ Centang di sini biar dua-duanya lihat posisi terkini.
 - [ ] Tidak ada testimoni atau angka karangan
 - [ ] Domain aktif dengan HTTPS, OG image muncul saat link dibagikan
 - [ ] Analytics mencatat klik tombol Pesan
+
