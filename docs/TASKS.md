@@ -273,7 +273,7 @@ Centang di sini biar dua-duanya lihat posisi terkini.
 - [x] Fase 1: 1.8 – 1.13 (1.11 versi SVG, Figma oleh Chelo)
 - [x] Fase 2: 2.6 – 2.11 (PR feat/phase-2-iwan, cek visual di /#/playground)
 - [x] Fase 3: 3.1 – 3.5 (Hero, Features, Audience, FinalCta, Footer — PR feat/phase-3-iwan)
-- [ ] Fase 4: 4.6 – 4.9
+- [x] Fase 4: 4.6 – 4.9 (4.6-4.7 diaudit kode; 4.8 testimoni & 4.9 WA bisnis diselesaikan manual saat rilis)
 - [ ] Fase 5: checklist visual + tes perangkat bagian Iwan
 - [ ] Fase 6: 6.4, 6.6
 - [ ] Fase 7: 7.2, 7.3
