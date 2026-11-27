@@ -7,27 +7,28 @@ export const audiences: Audience[] = [
     title: "Mahasiswa",
     icon: GraduationCap,
     description:
-      "Rangkum jurnal dengan NotebookLM, riset tugas akhir dengan Deep Research, dan minta Gemini jelasin materi yang bikin pusing.",
+      "Rangkum jurnal, riset skripsi, dan pahami materi kuliah jauh lebih cepat.",
   },
   {
     id: "pelajar",
     title: "Pelajar",
     icon: BookOpen,
     description:
-      "Teman belajar yang sabar. Latihan soal, ringkasan materi, dan bantuan nulis tugas.",
+      "Teman belajar 24/7 buat latihan soal, rangkuman, dan bantu kerjain tugas.",
   },
   {
     id: "developer",
     title: "Developer",
     icon: Code,
     description:
-      "Gemini untuk debugging, Antigravity untuk workflow coding agent, semua dalam satu langganan.",
+      "Ngoding & debugging lebih ngebut bareng Gemini Pro dan Antigravity.",
   },
   {
     id: "creator",
     title: "Content Creator",
     icon: Video,
-    description: "Olah ide visual dan bikin video lewat Google Flow, simpan aset di cloud.",
+    description:
+      "Bikin konsep visual, produksi video di Flow, dan simpan aset di cloud.",
   },
 ];
 
