@@ -5,6 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { buildOrderUrl } from "@/config";
 import { plans } from "@/data/plans";
+import { trackOrderClick } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 import { formatRupiah } from "@/lib/format";
 
@@ -110,6 +111,7 @@ export function Pricing() {
                       href={buildOrderUrl(plan.name)}
                       variant="primary"
                       icon
+                      onClick={() => trackOrderClick("pricing", plan.id)}
                       className={cn(
                         "w-full",
                         isSolid &&
