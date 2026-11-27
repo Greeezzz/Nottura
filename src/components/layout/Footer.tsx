@@ -2,6 +2,7 @@ import { FooterWordmark } from "@/components/ui/FooterWordmark";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { buildOrderUrl, config } from "@/config";
 import { disclaimers } from "@/data/legal";
+import { trackOrderClick } from "@/lib/analytics";
 
 const navLinks = [
   { label: "Paket", href: "#paket" },
@@ -89,6 +90,7 @@ export function Footer() {
                     href={buildOrderUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackOrderClick("footer_contact")}
                     className="transition-colors hover:text-fg"
                   >
                     {config.contactLabel}
@@ -99,6 +101,7 @@ export function Footer() {
                     href={buildOrderUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackOrderClick("footer_ask")}
                     className="transition-colors hover:text-fg"
                   >
                     Tanya Admin

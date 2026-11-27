@@ -4,6 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { buildOrderUrl, config } from "@/config";
+import { trackOrderClick } from "@/lib/analytics";
 
 export function FinalCta() {
   return (
@@ -24,10 +25,21 @@ export function FinalCta() {
               subtext={config.tagline}
             />
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-              <Button variant="primary" href={buildOrderUrl()} icon className="w-full sm:w-auto">
+              <Button
+                variant="primary"
+                href={buildOrderUrl()}
+                icon
+                onClick={() => trackOrderClick("final_cta_primary")}
+                className="w-full sm:w-auto"
+              >
                 Pesan Sekarang
               </Button>
-              <Button variant="secondary" href={buildOrderUrl()} className="w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                href={buildOrderUrl()}
+                onClick={() => trackOrderClick("final_cta_secondary")}
+                className="w-full sm:w-auto"
+              >
                 Tanya Admin Dulu
               </Button>
             </div>

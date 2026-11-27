@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { buildOrderUrl, config } from "@/config";
 import { useScrolled } from "@/hooks/useScrolled";
+import { trackOrderClick } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 
 const links = [
@@ -65,7 +66,11 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:block">
-            <Button href={buildOrderUrl()} icon>
+            <Button
+              href={buildOrderUrl()}
+              icon
+              onClick={() => trackOrderClick("navbar_desktop")}
+            >
               Pesan Sekarang
             </Button>
           </div>
@@ -104,7 +109,15 @@ export function Navbar() {
               ))}
             </ul>
           </nav>
-          <Button href={buildOrderUrl()} icon onClick={close} className="mt-6 w-full">
+          <Button
+            href={buildOrderUrl()}
+            icon
+            onClick={() => {
+              trackOrderClick("navbar_mobile");
+              close();
+            }}
+            className="mt-6 w-full"
+          >
             Pesan Sekarang
           </Button>
         </div>
