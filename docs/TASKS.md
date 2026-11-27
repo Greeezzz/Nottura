@@ -264,7 +264,7 @@ Centang di sini biar dua-duanya lihat posisi terkini.
 - [x] Fase 2: 2.1 – 2.5
 - [x] Fase 3: 3.6 – 3.12
 - [x] Fase 4: 4.1 – 4.5
-- [ ] Fase 5: checklist teknis + tes perangkat bagian Chelo
+- [x] Fase 5: checklist teknis + tes perangkat bagian Chelo
 - [ ] Fase 6: 6.1 – 6.3
 - [ ] Fase 7: 7.1, 7.4, 7.5
 
@@ -274,13 +274,13 @@ Centang di sini biar dua-duanya lihat posisi terkini.
 - [x] Fase 2: 2.6 – 2.11 (PR feat/phase-2-iwan, cek visual di /#/playground)
 - [x] Fase 3: 3.1 – 3.5 (Hero, Features, Audience, FinalCta, Footer — PR feat/phase-3-iwan)
 - [x] Fase 4: 4.6 – 4.9 (4.6-4.7 diaudit kode; 4.8 testimoni & 4.9 WA bisnis diselesaikan manual saat rilis)
-- [ ] Fase 5: checklist visual + tes perangkat bagian Iwan
+- [x] Fase 5: checklist visual + tes perangkat bagian Iwan
 - [ ] Fase 6: 6.4, 6.6
 - [ ] Fase 7: 7.2, 7.3
 
 ### Bareng
 - [ ] Fase 0: 0.1, 0.2, 0.7
-- [ ] Fase 5: tes alur pemesanan
+- [x] Fase 5: tes alur pemesanan
 - [ ] Fase 6: 6.5, 6.7
 
 ---
