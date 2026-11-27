@@ -21,12 +21,12 @@ export function Pricing() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:items-center">
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3 lg:items-center">
           {plans.map((plan, index) => {
             const isSolid = Boolean(plan.highlighted);
-            // Mobile: Shared tampil pertama; Desktop: urutan asli (Squad, Shared, Private)
+            // Mobile & Tablet: Shared tampil pertama; Desktop: urutan asli (Squad, Shared, Private)
             const orderClass = isSolid
-              ? "order-first md:order-none md:-my-4"
+              ? "order-first lg:order-none lg:-my-4"
               : undefined;
 
             return (
@@ -36,7 +36,7 @@ export function Pricing() {
                   variant={isSolid ? "solid" : "glass"}
                   className={cn(
                     "flex h-full flex-col justify-between p-7 md:p-8",
-                    isSolid && "md:py-10",
+                    isSolid && "lg:py-10",
                   )}
                 >
                   <div>
@@ -53,7 +53,7 @@ export function Pricing() {
                     </h3>
 
                     <div className="mt-6 flex flex-wrap items-baseline gap-x-1.5 gap-y-1">
-                      <span className="text-[44px] font-semibold leading-none tracking-[-0.04em] md:text-[52px]">
+                      <span className="text-[40px] font-semibold leading-none tracking-[-0.04em] sm:text-[44px] xl:text-[52px]">
                         {formatRupiah(plan.price)}
                       </span>
                       <span
