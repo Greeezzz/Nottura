@@ -32,7 +32,7 @@ export function Hero() {
               asH1
               badge="Google AI Pro lewat Family Sharing"
               lines={["Fitur Google Pro,", "harga yang masuk akal."]}
-              subtext="Satu paket, banyak fitur Google premium dengan harga yang lebih ramah di kantong. Nikmati Gemini Pro, NotebookLM, Deep Research, Google Flow, Antigravity, dan penyimpanan cloud."
+              subtext="Akses 6 fitur Google AI Pro lewat Family Sharing—pakai akun pribadimu, jauh lebih hemat."
             />
           </Reveal>
 
