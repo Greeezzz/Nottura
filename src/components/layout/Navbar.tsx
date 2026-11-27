@@ -34,6 +34,7 @@ export function Navbar() {
   const close = () => setOpen(false);
 
   return (
+    <>
     <header
       className={cn(
         "sticky top-0 z-50 border-b bg-bg/60 backdrop-blur-xl transition-colors duration-300",
@@ -63,9 +64,11 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button href={buildOrderUrl()} icon className="hidden md:inline-flex">
-            Pesan Sekarang
-          </Button>
+          <div className="hidden md:block">
+            <Button href={buildOrderUrl()} icon>
+              Pesan Sekarang
+            </Button>
+          </div>
           <button
             type="button"
             className="inline-flex size-11 items-center justify-center rounded-full md:hidden"
@@ -78,11 +81,13 @@ export function Navbar() {
           </button>
         </div>
       </div>
+    </header>
 
+      {/* Di luar <header>: backdrop-filter pada header membuat elemen fixed ikut terjebak di dalamnya */}
       {open && (
         <div
           id="mobile-menu"
-          className="fixed inset-x-0 top-16 bottom-0 flex flex-col gap-2 bg-bg/90 px-6 py-8 backdrop-blur-2xl md:hidden"
+          className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col gap-2 bg-bg/90 px-6 py-8 backdrop-blur-2xl md:hidden"
         >
           <nav aria-label="Navigasi mobile">
             <ul className="flex flex-col">
@@ -104,6 +109,6 @@ export function Navbar() {
           </Button>
         </div>
       )}
-    </header>
+    </>
   );
 }
