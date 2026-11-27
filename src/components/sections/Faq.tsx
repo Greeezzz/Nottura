@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Plus } from "lucide-react";
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -16,7 +17,12 @@ export function Faq() {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-32">
+    <section id="faq" className="relative isolate overflow-hidden py-20 md:py-32">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_45%_at_20%_50%,rgb(9_10_51/0.65)_0%,transparent_70%)]"
+      />
+      <EditorialBackdrop variant="section" index="04" label="FAQ" />
       <div className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading

@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/Badge";
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,6 +12,7 @@ export function HowItWorks() {
       id="cara-kerja"
       className="bg-[linear-gradient(180deg,#121212_0%,#090A33_50%,#121212_100%)] py-20 md:py-32"
     >
+      <EditorialBackdrop variant="section" index="03" label="FLOW" />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading

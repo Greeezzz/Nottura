@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { ChromeStar } from "@/components/ui/ChromeStar";
+import { EditorialBackdrop } from "@/components/ui/EditorialBackdrop";
 import { HeroBackground } from "@/components/ui/HeroBackground";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -10,17 +11,19 @@ export function Hero() {
   return (
     <section id="top">
       <HeroBackground className="pt-24 pb-20 md:pt-28 md:pb-32">
+        <EditorialBackdrop variant="hero" />
         <ChromeStar
-          size={140}
-          className="pointer-events-none absolute left-[3%] top-4 origin-top-left scale-50 opacity-60 animate-float md:left-[4%] md:top-14 md:scale-100 md:opacity-85"
+          size={200}
+          className="pointer-events-none absolute -left-8 top-2 origin-center -rotate-12 scale-[0.55] opacity-65 animate-float md:left-[2%] md:top-8 md:scale-100 md:opacity-80"
         />
         <ChromeStar
-          size={88}
-          className="pointer-events-none absolute right-[4%] top-4 origin-top-right scale-50 opacity-60 animate-float [animation-delay:1.2s] md:right-[6%] md:top-12 md:scale-100 md:opacity-85"
+          size={130}
+          className="pointer-events-none absolute -right-4 top-6 origin-center rotate-12 scale-[0.55] opacity-60 animate-float [animation-delay:1.2s] md:right-[4%] md:top-10 md:scale-100 md:opacity-80"
         />
         <ChromeStar
-          size={52}
-          className="pointer-events-none absolute right-[8%] bottom-16 scale-75 opacity-70 animate-float [animation-delay:2.4s] md:right-[16%] md:bottom-24 md:scale-100"
+          size={76}
+          orbital={false}
+          className="pointer-events-none absolute right-[8%] bottom-14 rotate-6 scale-75 opacity-70 animate-float [animation-delay:2.4s] md:right-[14%] md:bottom-24 md:scale-100"
         />
 
         <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
