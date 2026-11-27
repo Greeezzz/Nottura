@@ -65,7 +65,7 @@ Selesaikan dulu sebelum ngoding supaya nggak bongkar ulang.
 | 1.8 | Logo ✦ NOTTURA final | Versi SVG: ikon bintang saja, wordmark, dan gabungan. Versi putih di dasar gelap | `logo.svg`, `logo-mark.svg` |
 | 1.9 | Favicon | Bintang ✦ di 32px dan 180px (apple-touch) | `favicon.svg`, `apple-touch-icon.png` |
 | 1.10 | Finalisasi `ChromeStar` | Rapikan SVG di `DESIGN.md`: gradient, glow, ketebalan stroke, tes di 3 ukuran | `ChromeStar.tsx` final |
-| 1.11 | Mockup referensi hero + pricing di Figma | Satu frame desktop (1440) dan satu mobile (390) sebagai acuan polesan | Link Figma |
+| 1.11 | Mockup referensi hero + pricing (SVG dulu, versi Figma dikerjakan Chelo) | Satu frame desktop (1440) dan satu mobile (390) sebagai acuan polesan | `docs/mockups/desktop-1440.svg`, `mobile-390.svg` |
 | 1.12 | Rancang OG image | 1200×630, wordmark besar + tagline + glow navy | `og.png` |
 | 1.13 | Siapkan ikon pengganti | Cek ikon lucide per fitur sudah cocok, atau gambar ikon custom | Daftar ikon final |
 
