@@ -10,7 +10,7 @@ export function Audience() {
         <Reveal>
           <SectionHeading
             badge="Untuk siapa"
-            lines={["Dibuat buat yang", "butuh tools lengkap."]}
+            lines={["Cocok untuk yang", "butuh tools lengkap."]}
           />
         </Reveal>
 
