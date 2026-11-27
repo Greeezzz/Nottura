@@ -259,10 +259,10 @@ Artinya: **Chelo harus push scaffold secepatnya** (target hari 1), dan **Iwan ha
 Centang di sini biar dua-duanya lihat posisi terkini.
 
 ### Chelo
-- [ ] Fase 0: 0.4, 0.5, 0.6
-- [ ] Fase 1: 1.1 – 1.7
-- [ ] Fase 2: 2.1 – 2.5
-- [ ] Fase 3: 3.6 – 3.12
+- [x] Fase 0: 0.4, 0.5, 0.6
+- [x] Fase 1: 1.1 – 1.7
+- [x] Fase 2: 2.1 – 2.5
+- [x] Fase 3: 3.6 – 3.12
 - [ ] Fase 4: 4.1 – 4.5
 - [ ] Fase 5: checklist teknis + tes perangkat bagian Chelo
 - [ ] Fase 6: 6.1 – 6.3
